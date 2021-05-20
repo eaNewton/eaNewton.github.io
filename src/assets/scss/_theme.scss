@@ -1,0 +1,22 @@
+// Fonts
+@font-face {
+  font-family: "PTSans";
+  font-weight: "400";
+  src: local("PTSans"), url(../fonts/PTSans-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "PTSans";
+  font-weight: "700";
+  src: local("PTSans"), url(../fonts/PTSans-Bold.ttf) format("truetype");
+}
+
+$black: #0d1b2a;
+$gray: #e0e1dd;
+$white: #f6ffff;
+$dark-blue: #1b263b;
+$medium-blue: #415a77;
+$light-blue: #778da9;
+$lighter-blue: #c4daf6;
+$lightest-blue: #ddf3ff;
+$accent: #edd3c4;

@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  font-family: "PTSans";
+}
+
+.container {
+  padding: 15px;
+  box-shadow: 2px 5px 5px gray;
+}
+
+#hero-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: $lightest-blue;
+  color: $black;
+
+  #hero-wrapper {
+    text-align: center;
+  }
+
+  #hero-header {
+    text-align: center;
+    white-space: break-spaces;
+    word-break: break-word;
+  }
+}
+
+#about-container {
+  height: 100vh;
+  background-color: $medium-blue;
+  color: $white;
+}
+
+.next-container {
+  .next-button {
+    background: transparent;
+    border: none;
+
+    img {
+      width: 30px;
+      height: 30px;
+      transform: rotate(90deg);
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
