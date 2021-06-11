@@ -27,7 +27,7 @@ const HeroSection = ({ onPressNext }: HeroSectionPropsType) => {
             default: { duration: .4 },
           }}
         >
-          <h1 id={'hero-header'}>Hey, I'm Emmett. I'm a full-stack web and mobile developer</h1>
+          <h1 id={'hero-header'}>hey, i'm emmett. i'm a full-stack web and mobile developer</h1>
         </motion.div>
         <div className={`next-container ${isVisible ? 'fadeIn' : 'fadeOut'}`}>
           <motion.button

@@ -9,7 +9,7 @@ const ProjectsSection = (): React$Element => {
       <h1>projects</h1>
       <span className={'disclaimer'}>
         i do not own any of these projects.
-        i was the sole contributor or a member of a team of contributors responsible for development
+        i was either the sole contributor, or a member of a team of contributors responsible for development
       </span>
       <div id={'projects-container'}>
         {projects.map((project, index) => {
