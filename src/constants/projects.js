@@ -1,21 +1,3 @@
-const test = `<h4>past few years</h4>
-<ul>
-  <li>Open Stalls</li>
-  <li>WCRA</li>
-  <li>BeaconLive</li>
-  <li>Palaterra</li>
-  <li>Bluebird Botanicals</li>
-  <li>Praxent</li>
-</ul>
-
-<h4>earlier on</h4>
-<ul>
-  <li>Berbay</li>
-  <li>Inquiring Minds</li>
-  <li>Moses Legal</li>
-</ul>
-`
-
 export const projects = [
   {
     description: 'a reservation app for stalls + RV spots at rodeo events',

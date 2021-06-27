@@ -1,0 +1,23 @@
+.btn-primary {
+  margin-top: 15px;
+  margin-right: auto;
+  margin-bottom: 15px;
+  margin-left: auto;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 3px;
+  background-color: $medium-blue;
+  color: $white;
+  font-family: 'PTSans';
+  font-size: 24px;
+  font-weight: 700;
+
+  &:disabled,
+  &[disabled] {
+    opacity: 0.5;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

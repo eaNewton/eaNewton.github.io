@@ -1,17 +1,20 @@
 // @flow
 import React from 'react'
 
-type ProjectType = {|
-  description: string,
-  stack: [],
-|}
+export type ProjectType = {
+  description?: string,
+  highlights?: any,
+  link?: string,
+  name: string,
+  stack?: any,
+}
 
-type ProjectPropsType = {|
-  index: string | Number,
+type ProjectPropsType = {
+  index: string | number,
   project: ProjectType,  
-|}
+}
 
-const Project = ({ index, project }: ProjectPropsType): React$Element => {
+const Project: React.FC<ProjectPropsType> = ({ index, project }) => {
   const getDescription = () => {
     if (!project.description) return ''
     return (
@@ -27,8 +30,8 @@ const Project = ({ index, project }: ProjectPropsType): React$Element => {
       <div className={'project-stack-container'}>
         <span className={'project-stack-header'}>stack: </span>
         <ul>
-          {project.stack.map((p, index) => {
-            return <li key={index + Math.random()}>{p}</li>
+          {project.stack.map((s: string, index: number) => {
+            return <li key={index + Math.random()}>{s}</li>
           })}
         </ul>
       </div>
@@ -40,8 +43,8 @@ const Project = ({ index, project }: ProjectPropsType): React$Element => {
     return (
       <div className={'project-highlights-container'}>
         <span className={'project-highlights-header'}>highlights: </span>
-        {project.highlights.map((highlight) => {
-          return <span className={'project-highlight'}>{highlight}</span>
+        {project.highlights.map((highlight: string, index: number) => {
+          return <span className={'project-highlight'} key={index}>{highlight}</span>
         })}
       </div>
     )

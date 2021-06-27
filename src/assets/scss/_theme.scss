@@ -6,13 +6,15 @@
 }
 
 @font-face {
-  font-family: "PTSans";
+  font-family: "PTSans Bold";
   font-weight: "700";
-  src: local("PTSans"), url(../fonts/PTSans-Bold.ttf) format("truetype");
+  src: local("PTSans Bold"), url(../fonts/PTSans-Bold.ttf) format("truetype");
 }
 
 $black: #0d1b2a;
 $gray: #e0e1dd;
+$gray-dark: #949591;
+$gray-darkest: #474844;
 $white: #f6ffff;
 $dark-blue: #1b263b;
 $medium-blue: #415a77;

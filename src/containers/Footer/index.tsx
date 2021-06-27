@@ -1,7 +1,8 @@
-// @flow
 import React from 'react'
 
-const Footer = () => {
+type FooterPropsType = {}
+
+const Footer: React.FC<FooterPropsType> = () => {
   return (
     <div className={'footer container'}>
       <div className={'footer-wrapper'}>

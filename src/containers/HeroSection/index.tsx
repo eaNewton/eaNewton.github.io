@@ -1,11 +1,10 @@
-// @flow
 import React, { useEffect, useState } from 'react'
-import { motion } from "framer-motion"
+import { motion } from 'framer-motion'
 import NextArrow from '../../assets/img/icons/next.svg'
 
-type HeroSectionPropsType = {|
+type HeroSectionPropsType = {
   onPressNext: () => void,  
-|}
+}
 
 const HeroSection = ({ onPressNext }: HeroSectionPropsType) => {
   const [isVisible, setIsVisible] = useState(false)

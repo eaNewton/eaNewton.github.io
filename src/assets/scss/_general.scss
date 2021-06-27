@@ -3,9 +3,24 @@ body {
   font-family: "PTSans";
 }
 
+::selection {
+  background-color: $accent;
+  color: $black;
+}
+
+.align-center {
+  text-align: center;
+}
+
 .container {
   padding: 15px;
-  box-shadow: 2px 5px 5px gray;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 #hero-container {
@@ -30,8 +45,28 @@ body {
 
 #about-container {
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
   background-color: $medium-blue;
   color: $white;
+
+  .section-header-container {
+    flex: 0 0 100%;
+  }
+}
+
+#projects-container {
+  background: $white;
+}
+
+#contact-container {
+  background-color: $light-blue;
+
+  #contact-wrapper {
+    padding: 15px 0;
+  }
 }
 
 .next-container {
