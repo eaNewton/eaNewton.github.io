@@ -10,20 +10,17 @@ const App: any = () => {
   const projectsRef = useRef<HTMLDivElement>(null)
   const contactRef = useRef<HTMLDivElement>(null)
 
-  const scrollToAbout = () => {
-    if (aboutRef.current === null) return
-    aboutRef.current.scrollIntoView({ behavior: 'smooth' })
+  const scrollTo = (ref: any) => {
+    if (ref.current === null) return
+    return ref.current.scrollIntoView({ behavior: 'smooth' })
   }
-
-  const scrollToProjects = () => {}
-  const scrollToContact = () => {}
 
   return (
     <div className={'App'}>
       <div className={'app-wrapper'}>
-        <HeroSection onPressNext={scrollToAbout} />
-        <AboutSection onPressNext={scrollToProjects} ref={aboutRef} />
-        <ProjectsSection onPressNext={scrollToContact} ref={projectsRef} />
+        <HeroSection onPressNext={() => scrollTo(aboutRef)} />
+        <AboutSection onPressNext={() => scrollTo(projectsRef)} ref={aboutRef} />
+        <ProjectsSection onPressNext={() => scrollTo(contactRef)} ref={projectsRef} />
         <ContactSection ref={contactRef} />
       </div>
     </div>

@@ -7,6 +7,7 @@ export type ProjectType = {
   link?: string,
   name: string,
   stack?: any,
+  type: string,
 }
 
 type ProjectPropsType = {
@@ -38,26 +39,26 @@ const Project: React.FC<ProjectPropsType> = ({ index, project }) => {
     )
   }
 
-  const getHighlights = () => {
-    if (!project.highlights || !project.highlights.length) return ''
-    return (
-      <div className={'project-highlights-container'}>
-        <span className={'project-highlights-header'}>highlights: </span>
-        {project.highlights.map((highlight: string, index: number) => {
-          return <span className={'project-highlight'} key={index}>{highlight}</span>
-        })}
-      </div>
-    )
-  }
+  // const getHighlights = () => {
+  //   if (!project.highlights || !project.highlights.length) return ''
+  //   return (
+  //     <div className={'project-highlights-container'}>
+  //       <span className={'project-highlights-header'}>highlights: </span>
+  //       {project.highlights.map((highlight: string, index: number) => {
+  //         return <span className={'project-highlight'} key={index}>{highlight}</span>
+  //       })}
+  //     </div>
+  //   )
+  // }
 
   return (
-    <div className={'container project-wrapper'} key={index}>
+    <div className={`container project-wrapper ${project.type === 'Web' ? `project-web` : `project-mobile`}`} key={index}>
       <a href={project.link} target={'_blank'} rel="noreferrer">
         <h3 className={'project-name'}>{project.name}</h3>
       </a>
       {getDescription()}
       {getStack()}
-      {getHighlights()}
+      {/* {getHighlights()} */}
     </div>
   )
 }

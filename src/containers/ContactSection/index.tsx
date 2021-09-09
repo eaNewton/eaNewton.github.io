@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { forwardRef, useEffect, useState } from 'react'
 import { motion } from "framer-motion"
 
 import ContactForm from '../../components/ContactForm'
 import SectionHeader from '../../components/SectionHeader'
 
-type ContactSectionPropsType = {}
+type ContactSectionPropsType = {
+  ref: any,
+}
 
-const ContactSection: React.FC<ContactSectionPropsType> = () => {
+const ContactSection: React.FC<ContactSectionPropsType> = forwardRef<any, any>((props, ref) => {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
@@ -14,11 +16,6 @@ const ContactSection: React.FC<ContactSectionPropsType> = () => {
       setIsVisible(true)
     }, 1000)
   }, [])
-
-  const submitContactForm = (e: any) => {
-    e.preventDefault()
-    console.log('Submitting contact form!', e)
-  }
 
   return (
     <div className={'container flex-container'} id={'contact-container'}>
@@ -31,13 +28,13 @@ const ContactSection: React.FC<ContactSectionPropsType> = () => {
             default: { duration: .4 },
           }}
         >
-          <SectionHeader style={'light'} text={'Get in Touch'} />
-          <ContactForm isVisible={isVisible} onSubmit={(e: Event) => submitContactForm(e)} />
+          <SectionHeader textStyle={'light'} text={'Get in Touch'} />
+            <ContactForm isVisible={isVisible} />
         </motion.div>
       </div>
     </div>
   )
-}
+})
 
 
 export default ContactSection
