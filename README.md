@@ -17,4 +17,4 @@ Launches the test runner in the interactive watch mode. There aren't any tests, 
 
 ### `yarn build`
 
-Builds the app for production to the `build` folder.\
+Builds the app for production to the `build` folder.

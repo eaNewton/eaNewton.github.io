@@ -55,10 +55,53 @@ body {
   .section-header-container {
     flex: 0 0 100%;
   }
+
+  .about-list {
+    list-style-type: none;
+  }
 }
 
 #projects-container {
-  background: $white;
+  background: 'red';
+}
+
+#projects-wrapper {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media (min-width: 768px) {
+    width: 55%;
+  }
+}
+
+.project-wrapper {
+  max-width: 420px;
+  padding: 30px;
+  margin: 30px auto;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px gray;
+  color: $white;
+
+  &.project-web {
+    background-color: $dark-blue;
+  }
+
+  &.project-mobile {
+    background-color: $medium-blue;
+  }
+
+  > a {
+    text-decoration: none;
+  }
+
+  .project-name {
+    margin: 0;
+    color: $accent;
+    font-size: 36px;
+  }
 }
 
 #contact-container {
@@ -70,6 +113,9 @@ body {
 }
 
 .next-container {
+  width: 100%;
+  text-align: center;
+
   .next-button {
     background: transparent;
     border: none;
@@ -82,6 +128,93 @@ body {
 
     &:hover {
       cursor: pointer;
+    }
+  }
+}
+
+.headshot-container {
+  flex: 0 0 100%;
+  text-align: center;
+
+  .headshot {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+  }
+}
+
+.icons-container {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+
+  .icon-link {
+    margin: 0 30px;
+    transition: 0.1s all ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: 0.1s all ease-in-out;
+    }
+  }
+
+  .icon {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.thanks-container {
+  min-height: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > h3 {
+    color: $white;
+  }
+}
+
+.form-wrapper {
+  &.has-error {
+    opacity: 0.5;
+    transition: 0.2s opacity ease-in-out;
+  }
+
+  &.no-error {
+    opacity: 1;
+    transition: 0.2s opacity ease-in-out;
+  }
+}
+
+.error-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+
+  .error-wrapper {
+    padding: 15px;
+    background-color: $accent;
+    border: 1px solid $accent-dark;
+    border-radius: 3px;
+
+    .error-text {
+      color: $accent-dark;
+
+      .error-message {
+        padding-left: 5px;
+        font-family: "Courier New";
+
+      }
     }
   }
 }
