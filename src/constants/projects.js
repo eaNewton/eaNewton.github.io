@@ -1,6 +1,23 @@
 export const projects = [
   {
     id: 0,
+    description: 'a redesigned, unified mobile app offering agents a complete platform to manage lead information coming from multiple sources',
+    highlights: '',
+    name: 'RDC Pro',
+    stack: ['React Native', 'TypeScript', 'GraphQL', 'Storybook', 'Firebase', 'Jest'],
+    type: 'Mobile',
+  },
+  {
+    id: 1,
+    description: 'a mobile app providing agents with a faster click-to-claim, visual lead alerts, and easy access to the referral manager',
+    highlights: '',
+    link: 'https://mobile.opcity.com/',
+    name: 'Opcity',
+    stack: ['React Native', 'TypeScript', 'Redux', 'Python', 'Firebase', 'Jest'],
+    type: 'Mobile',
+  },
+  {
+    id: 2,
     description: 'providing alooola members with access to a premier advisory service that leads them on a path to achieve long-term wealth growth',
     highlights: '',
     link: 'https://www.alooola.com/',
@@ -9,7 +26,7 @@ export const projects = [
     type: 'Mobile',
   },
   {
-    id: 1,
+    id: 3,
     description: 'a mobile app enabling users to directly and securely access, manage, and better plan their retirement income',
     highlights: '',
     link: 'https://bluestarretirement.com/',
@@ -18,7 +35,7 @@ export const projects = [
     type: 'Mobile',
   },
   {
-    id: 2,
+    id: 4,
     description: 'a reservation app for stalls + RV spots at rodeo events',
     highlights: [
       'immediate adoption + implementation of react hooks'
@@ -29,7 +46,7 @@ export const projects = [
     type: 'Web',
   },
   {
-    id: 3,
+    id: 5,
     description: 'an event entry + progress tracking tool for rodeo athletes',
     highlights: [
       'refactored from class components into functional components',
@@ -41,7 +58,7 @@ export const projects = [
     type: 'Web',
   },
   {
-    id: 4,
+    id: 6,
     description: 'delivering a number of solutions for virtual event hosting, continuing education + certifications, and more',
     link: 'https://www.beaconlive.com/',
     name: 'BeaconLive',
@@ -49,7 +66,7 @@ export const projects = [
     type: 'Web',
   },
   {
-    id: 5,
+    id: 7,
     description: 'retail event management system - enables seamless management and measurement of regional and nationwide consumer event programs with a single, easy-to-use, and powerful platform',
     highlights: '',
     link: 'https://app.palaterra.com/',
@@ -58,7 +75,7 @@ export const projects = [
     type: 'Web',
   },
   {
-    id: 6,
+    id: 8,
     description: 'an e-commerce platform for one of the nation\'s leading cbd wholesalers',
     highlights: [
       'built a custom store locator app'
@@ -69,7 +86,7 @@ export const projects = [
     type: 'Web',
   },
   {
-    id: 7,
+    id: 9,
     description: 'custom software design + development - company site',
     highlights: [
       'full redesign + rebuild of the company site',
@@ -81,7 +98,7 @@ export const projects = [
     type: 'Web',
   },
   {
-    id: 8,
+    id: 10,
     description: 'an marketing and public relations firm specializing in law firm marketing',
     highlights: [
       'full design refresh',

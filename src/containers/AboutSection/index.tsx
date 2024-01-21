@@ -38,21 +38,21 @@ const AboutSection: React.FC<AboutSectionPropsType> = forwardRef<any, any>(({ on
       <div>
         <h4>general</h4>
         <ul className={'about-list'}>
-          <li>based in austin, tx</li>
-          <li>6th-year web + software developer </li>
-          <li>fullstack development, strongest on FE</li>
-          <li>experience in a handful of industries - fintech, event management, e-commerce, etc</li>
-          <li>clean code, clean architecture, happy developer</li>
+          <li>based in los angeles, ca</li>
+          <li>fullstack mobile + web developer</li>
+          <li>experience in real estate, fintech, event management, e-commerce, etc</li>
         </ul>
-        <h4>web/mobile stacks</h4>
+        <h4>stack</h4>
         <ul className={'about-list'}>
           <li>React/React Native</li>
-          <li>Redux/Redux Slices (where necessary) otherwise Context API/custom hooks</li>
-          <li>REST, GraphQL</li>
-          <li>Node.js</li>
-          <li>TypeScript, Flow Typing</li>
+          <li>TypeScript</li>
+          <li>Redux (for complex state), useReducer (for simpler state)</li>
+          <li>React Navigation, expo-router</li>
+          <li>GraphQL, REST</li>
+          <li>Jest, React Testing Library</li>
+          <li>Node.js or Python for backend</li>
+          <li>circle-ci, eas for CI/CD</li>
           <li>Docker, AWS</li>
-          <li>...wordpress + PHP</li>
         </ul>
       </div>
       <div className={`next-container ${isVisible ? 'fadeIn' : 'fadeOut'}`}>

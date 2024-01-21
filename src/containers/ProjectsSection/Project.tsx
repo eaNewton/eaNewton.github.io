@@ -3,10 +3,11 @@ import React from 'react'
 
 export type ProjectType = {
   description?: string,
-  highlights?: any,
+  highlights?: string | string[],
+  id: number,
   link?: string,
   name: string,
-  stack?: any,
+  stack?: string[],
   type: string,
 }
 
@@ -15,7 +16,7 @@ type ProjectPropsType = {
   project: ProjectType,  
 }
 
-const Project: React.FC<ProjectPropsType> = ({ index, project }) => {
+const Project: React.FC<ProjectPropsType> = ({ project }) => {
   const getDescription = () => {
     if (!project.description) return ''
     return (
@@ -52,10 +53,14 @@ const Project: React.FC<ProjectPropsType> = ({ index, project }) => {
   // }
 
   return (
-    <div className={`container project-wrapper ${project.type === 'Web' ? `project-web` : `project-mobile`}`} key={index}>
-      <a href={project.link} target={'_blank'} rel="noreferrer">
-        <h3 className={'project-name'}>{project.name}</h3>
-      </a>
+    <div className={`container project-wrapper ${project.type === 'Web' ? `project-web` : `project-mobile`}`} key={`project__${project.id}`}>
+      {project.link ? (
+        <a href={project.link} target={'_blank'} rel="noreferrer">
+          <h3 className={'project-name'}>{project.name}</h3>
+        </a>
+      ) : (
+        <h3 className = { 'project-name' }>{project.name}</h3>
+      )}
       {getDescription()}
       {getStack()}
       {/* {getHighlights()} */}
