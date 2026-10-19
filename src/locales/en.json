@@ -1,0 +1,69 @@
+{
+  "developer": {
+    "first-name": "Emmett",
+    "last-name": "Newton"
+  },
+  "hero-section": {
+    "greeting": "hey, i'm emmett",
+    "body": "i'm a full-stack software engineer"
+  },
+  "portfolio-section": {
+    "disclaimer": "i do not own any of these projects - i was either the sole contributor or a member of a team of contributors responsible for development",
+    "title": "here's what i've been working on...",
+    "visit-project": "visit project",
+    "items": {
+      "alooola": {
+        "description": "a react native app providing members with access to a premier advistory service that leads them on a path to achieve long-term wealth growth",
+        "title": "alooola"
+      },
+      "bluestar": {
+        "description": "a react native app enabling users to directly and securely access, manage, and better plan their retirement income",
+        "title": "bluestar"
+      },
+      "breakerlink": {
+        "description": "a bluetooth low-energy flow for updating abb's ELITE circuit breakers (within the octane app)",
+        "title": "breakerlink"
+      },
+      "building-blocks": {
+        "description": "a vue-based component library for use across company apps",
+        "title": "building blocks"
+      },
+      "octane": {
+        "description": "a vue app for automating and managing home power consumption",
+        "title": "octane"
+      },
+      "opcity": {
+        "description": "a react native app providing agents with a faster click-to-claim, visual lead alerts, and easy access to the referral manager",
+        "title": "opcity"
+      },
+      "open-stalls": {
+        "description": "a react app for reserving stalls + rv spot at rodeo events",
+        "title": "open stalls"
+      },
+      "rdc-pro": {
+        "description": "a redesigned, unified react native app offering agents a complete platform to manage lead information",
+        "title": "rdc pro"
+      },
+      "wattson": {
+        "description": "a vue app for calculating residential electrical load",
+        "title": "wattson"
+      },
+      "wcra": {
+        "description": "a react app tracking tool for rodeo athletes' event entry + progress tracking",
+        "title": "wcra"
+      }
+    }
+  },
+  "contact-section": {
+    "title": "get in touch"
+  },
+  "contact-form": {
+    "email": "email",
+    "error": "error sending message. please try again",
+    "message": "message",
+    "name": "name",
+    "send": "send",
+    "submit": "submit",
+    "success": "message successfully sent!"
+  }
+}

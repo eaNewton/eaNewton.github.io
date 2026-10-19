@@ -1,20 +1,52 @@
-# eanewton.github.io
+# eaNewton.github.io
 
-A small react app for my personal portfolio
+This template should help get you started developing with Vue 3 in Vite.
 
-## Available Scripts
+## Recommended IDE Setup
 
-In the project directory, you can run:
+[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-### `yarn start`
+## Recommended Browser Setup
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Chromium-based browsers (Chrome, Edge, Brave, etc.):
+  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
+  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
+- Firefox:
+  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
+  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
 
-### `yarn test`
+## Type Support for `.vue` Imports in TS
 
-Launches the test runner in the interactive watch mode. There aren't any tests, though.
+TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
 
-### `yarn build`
+## Customize configuration
 
-Builds the app for production to the `build` folder.
+See [Vite Configuration Reference](https://vite.dev/config/).
+
+## Project Setup
+
+```sh
+yarn
+```
+
+### Contact Form
+
+Create a `.env` file from `.env.example` and set the EmailJS service ID, template ID, and public key from your EmailJS account. Configure the template fields as `user_name`, `user_email`, and `message`.
+
+### Compile and Hot-Reload for Development
+
+```sh
+yarn dev
+```
+
+### Type-Check, Compile and Minify for Production
+
+```sh
+yarn build
+```
+
+### Lint with [ESLint](https://eslint.org/)
+
+```sh
+yarn lint
+```
