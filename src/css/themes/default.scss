@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'Blinker-Black';
+  src: url('../fonts/Blinker-Black.ttf') format('truetype');
+  /* Define variable font axes */
+  font-weight: 900; /* Corresponds to wght axis */
+  font-optical-sizing: auto; /* Handles opsz axis */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Blinker-Bold';
+  src: url('../fonts/Blinker-Bold.ttf') format('truetype');
+  /* Define variable font axes */
+  font-weight: 700; /* Corresponds to wght axis */
+  font-optical-sizing: auto; /* Handles opsz axis */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Blinker-Regular';
+  src: url('../fonts/Blinker-Regular.ttf') format('truetype');
+  /* Define variable font axes */
+  font-weight: 400; /* Corresponds to wght axis */
+  font-optical-sizing: auto; /* Handles opsz axis */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Blinker-Light';
+  src: url('../fonts/Blinker-Light.ttf') format('truetype');
+  /* Define variable font axes */
+  font-weight: 300; /* Corresponds to wght axis */
+  font-optical-sizing: auto; /* Handles opsz axis */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Blinker-Thin';
+  src: url('../fonts/Blinker-Thin.ttf') format('truetype');
+  /* Define variable font axes */
+  font-weight: 100; /* Corresponds to wght axis */
+  font-optical-sizing: auto; /* Handles opsz axis */
+  font-display: swap;
+}
+
+body {
+  --font-family-900: 'Blinker-Black';
+  --font-family-700: 'Blinker-Bold';
+  --font-family-400: 'Blinker-Regular';
+  --font-family-300: 'Blinker-Light';
+  --font-family-100: 'Blinker-Thin';
+
+  --font-size-h1: 2rem;
+  --font-size-h2: 1.5rem;
+  --font-size-h3: 1.3rem;
+  --font-size-h4: 1.15rem;
+  --font-size-h5: 1.05rem;
+  --font-size-h6: 0.999rem;
+
+  --foreground-bg: #693e91;
+  --foreground-bg-transparent: #693e9150;
+  --middleground-bg: #573377;
+  --middleground-bg-transparent: #57337750;
+  --background-bg: #130b1b;
+  --background-bg-transparent: #130b1b50;
+  --space-bg: #050510;
+  --light-space-bg: #2b193b;
+
+  --general-text-color: #f4eff8;
+}
