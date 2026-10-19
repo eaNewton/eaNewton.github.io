@@ -153,7 +153,7 @@ onUnmounted(() => {
 @keyframes shooting-star-travel {
   0% {
     opacity: 0;
-    transform: translate3d(0, 0, 0) rotate(-35deg) scaleX(0.25);
+    transform: translate3d(0, 0, 0) rotate(var(--shoot-angle)) scaleX(0.25);
   }
 
   12% {
@@ -162,7 +162,7 @@ onUnmounted(() => {
 
   100% {
     opacity: 0;
-    transform: translate3d(-150px, 105px, 0) rotate(-35deg) scaleX(1);
+    transform: translate3d(var(--shoot-x), var(--shoot-y), 0) rotate(var(--shoot-angle)) scaleX(1);
   }
 }
 </style>
