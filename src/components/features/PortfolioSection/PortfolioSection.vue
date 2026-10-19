@@ -54,6 +54,7 @@ const portfolioItems: PortfolioItem[] = [
   },
   {
     description: t('portfolio-section.items.rdc-pro.description'),
+    icon: reactIcon,
     id: 'portfolio_item_rdc_pro',
     link: 'https://apps.apple.com/us/app/realtor-com-pro/id1382372941',
     stack: ['react native'],
@@ -61,6 +62,7 @@ const portfolioItems: PortfolioItem[] = [
   },
   {
     description: t('portfolio-section.items.opcity.description'),
+    icon: reactIcon,
     id: 'portfolio_item_opcity',
     link: 'https://mobile.opcity.com/',
     stack: ['react native'],
@@ -68,6 +70,7 @@ const portfolioItems: PortfolioItem[] = [
   },
   {
     description: t('portfolio-section.items.alooola.description'),
+    icon: reactIcon,
     id: 'portfolio_item_alooola',
     link: 'https://apps.apple.com/us/app/alooola-wealth-management/id1582483447',
     stack: ['react native'],
@@ -75,6 +78,7 @@ const portfolioItems: PortfolioItem[] = [
   },
   {
     description: t('portfolio-section.items.bluestar.description'),
+    icon: reactIcon,
     id: 'portfolio_item_bluestar',
     link: 'https://play.google.com/store/apps/details?id=com.ameritas.myplanconnection&hl=en_US&pli=1',
     stack: ['react native'],
