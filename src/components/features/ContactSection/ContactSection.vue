@@ -8,7 +8,7 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <cardElement>
+  <cardElement class="contact-section-container">
     <div class="section-title-container mb-xxl">
       <h2 class="section-title">{{ t('contact-section.title') }}</h2>
     </div>
@@ -21,13 +21,21 @@ const { t } = useI18n()
 
 <style scoped>
 .contact-form-container {
+  box-sizing: border-box;
   background: var(--middleground-bg-transparent);
   border-radius: 8px;
+  flex: 1 1 0%;
+  min-width: 0;
+  max-width: 400px;
   width: 100%;
 }
 
+.contact-section-container {
+  align-items: center;
+  justify-content: center;
+}
+
 .section-title-container {
-  margin-top: 192px;
   width: 100%;
 }
 

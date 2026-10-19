@@ -13,18 +13,20 @@ import ContactSection from './components/features/ContactSection/ContactSection.
       <HeroSection />
     </div>
 
-    <div class="scroll-section mb-xxl" id="portfolio-section">
+    <div class="scroll-section" id="portfolio-section">
       <PortfolioSection />
     </div>
 
-    <div class="scroll-section mt-xxl" id="contact-section">
+    <div class="scroll-section" id="contact-section">
       <ContactSection />
     </div>
   </div>
 </template>
 
 <style scoped>
-#hero-section {
+#hero-section,
+#portfolio-section,
+#contact-section {
   height: 100vh;
 }
 

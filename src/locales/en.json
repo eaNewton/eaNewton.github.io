@@ -64,6 +64,14 @@
     "name": "name",
     "send": "send",
     "submit": "submit",
-    "success": "message successfully sent!"
+    "success": "message successfully sent!",
+    "validation": {
+      "emailInvalid": "enter a valid email address.",
+      "emailRequired": "email is required.",
+      "messageMinLength": "message must be at least 10 characters.",
+      "messageRequired": "message is required.",
+      "nameMinLength": "name must be at least 2 characters.",
+      "nameRequired": "name is required."
+    }
   }
 }

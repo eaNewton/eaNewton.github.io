@@ -2,6 +2,8 @@
 import Lenis from 'lenis'
 import { onMounted, onUnmounted, ref } from 'vue'
 
+import { useShootingStars } from '@/composables/useShootingStars'
+
 type Star = {
   el: HTMLDivElement
   initialY: number
@@ -12,6 +14,8 @@ const starsContainer = ref<HTMLDivElement | null>(null)
 let lenis: Lenis | undefined
 let animationFrame: number | undefined
 let onScroll: ((lenis: Lenis) => void) | undefined
+
+useShootingStars(starsContainer)
 
 onMounted(() => {
   const container = starsContainer.value
@@ -111,6 +115,18 @@ onUnmounted(() => {
   will-change: transform, opacity;
 }
 
+#stars :deep(.shooting-star) {
+  animation: shooting-star-travel var(--shoot-duration) ease-out forwards;
+  background: linear-gradient(90deg, #fff, rgba(220, 235, 255, 0.8) 18%, transparent 100%);
+  border-radius: 999px;
+  height: 2px;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: left center;
+  width: 130px;
+  will-change: transform, opacity;
+}
+
 @media (max-width: 640px) {
   #stars :deep(.star) {
     box-shadow: none;
@@ -131,6 +147,22 @@ onUnmounted(() => {
 
   50% {
     opacity: 1;
+  }
+}
+
+@keyframes shooting-star-travel {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) rotate(-35deg) scaleX(0.25);
+  }
+
+  12% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(-150px, 105px, 0) rotate(-35deg) scaleX(1);
   }
 }
 </style>
