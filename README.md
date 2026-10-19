@@ -33,6 +33,8 @@ yarn
 
 Create a `.env` file from `.env.example` and set the EmailJS service ID, template ID, and public key from your EmailJS account. Configure the template fields as `user_name`, `user_email`, and `message`.
 
+For GitHub Pages deployments, add `VITE_EMAILJS_SERVICE_ID`, `VITE_EMAILJS_TEMPLATE_ID`, and `VITE_EMAILJS_PUBLIC_KEY` as repository Actions variables. In repository Settings > Pages, set the build and deployment source to GitHub Actions.
+
 ### Compile and Hot-Reload for Development
 
 ```sh
