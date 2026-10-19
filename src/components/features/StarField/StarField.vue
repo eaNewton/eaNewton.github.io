@@ -18,8 +18,11 @@ onMounted(() => {
   if (!container) return
 
   const stars: Star[] = []
+  const starElements = document.createDocumentFragment()
+  const isMobile = window.matchMedia('(max-width: 640px)').matches
+  const count = isMobile ? 32 : 64
 
-  for (let i = 0; i < 80; i++) {
+  for (let i = 0; i < count; i++) {
     const el = document.createElement('div')
     el.className = 'star'
 
@@ -30,15 +33,20 @@ onMounted(() => {
     const size = isStatic ? 1 + Math.random() : 1 + Math.random() * 2
 
     el.style.left = `${x}%`
-    el.style.top = `${y}%`
+    el.style.top = '0'
     el.style.width = `${size}px`
     el.style.height = `${size}px`
     el.style.setProperty('--duration', `${2 + Math.random() * 4}s`)
     el.style.animationDelay = `${Math.random() * 5}s`
+    el.style.transform = `translateY(${y}vh)`
 
-    container.appendChild(el)
+    starElements.appendChild(el)
     stars.push({ el, initialY: y, speed })
   }
+
+  container.appendChild(starElements)
+
+  if (isMobile || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
   lenis = new Lenis({
     duration: 1.2,
@@ -50,15 +58,13 @@ onMounted(() => {
 
     stars.forEach((star) => {
       if (star.speed === 0) {
-        star.el.style.transform = 'scaleY(1)'
         return
       }
 
       let position = (star.initialY - scroll * star.speed * 0.05) % 100
       if (position < 0) position += 100
 
-      star.el.style.top = `${position}%`
-      star.el.style.transform = `scaleY(${stretch})`
+      star.el.style.transform = `translateY(${position}vh) scaleY(${stretch})`
     })
   }
 
@@ -102,7 +108,19 @@ onUnmounted(() => {
   box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
   position: absolute;
   transform-origin: center;
-  will-change: top, transform, opacity;
+  will-change: transform, opacity;
+}
+
+@media (max-width: 640px) {
+  #stars :deep(.star) {
+    box-shadow: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #stars :deep(.star) {
+    animation: none;
+  }
 }
 
 @keyframes twinkle {

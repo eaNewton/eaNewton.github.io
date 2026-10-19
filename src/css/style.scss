@@ -11,7 +11,8 @@ body {
 body::before,
 body::after {
   content: '';
-  position: absolute;
+  pointer-events: none;
+  position: fixed;
   inset: 0;
   mix-blend-mode: screen;
 }
@@ -32,6 +33,16 @@ body::after {
     radial-gradient(ellipse 250px 400px at 55% 20%, rgba(30, 60, 150, 0.12), transparent 60%);
   filter: blur(90px);
   z-index: -1;
+}
+
+@media (max-width: 640px) {
+  body::before {
+    filter: blur(36px);
+  }
+
+  body::after {
+    filter: blur(42px);
+  }
 }
 
 .flex {
